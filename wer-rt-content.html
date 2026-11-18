@@ -1,0 +1,41 @@
+<h3 class="text-success">Fechas importantes</h3>
+<ul>
+  <li>
+    Envío de abstract:
+    <del>24 de marzo 2025</del>
+    <strong>31 de marzo 2025</strong>
+    <span class="badge bg-danger ms-2">New Deadline</span>
+  </li>
+</ul>
+
+<!-- CONTENIDO DE TOPIICOS DE INTERES + INSTRUCCIONES-->
+<div id="contenido-topicos"></div>
+
+<h3 class="text-success">Organización</h3>
+
+<ul>
+  <li>
+    <h4>Coordinadores del Track</h4>
+    <ul>
+      <li>
+        Marcela Ridao — Universidad Nacional del Centro de la Provincia de Buenos Aires, Argentina
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <h4>Comité del programa</h4>
+    <ul>
+      <li>
+        Alejandro Maté — University of Alicante, España
+      </li>
+    </ul>
+  </li>
+</ul>
+<script>
+  fetch("intructions-topic-interest.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("contenido-topicos").innerHTML = data;
+    });
+</script>
